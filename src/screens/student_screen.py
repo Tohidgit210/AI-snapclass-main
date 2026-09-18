@@ -3,7 +3,7 @@ import streamlit as st
 from src.ui.base_layout import style_background_dashboard, style_base_layout
 
 from src.components.header import header_dashboard
-# from src.components.footer import footer_dashboard
+from src.components.footer import footer_dashboard
 from PIL import Image
 import numpy as np
 from src.pipelines.face_pipeline import predict_attendance, get_face_embeddings, train_classifier
@@ -35,7 +35,7 @@ def student_dashboard():
         st.header('Your Enrolled Subjects')
     with c2:
         if st.button('Enroll in Subject', type='primary', width='stretch'):
-            # enroll_dialog()
+            enroll_dialog()
 
 
     st.divider()
@@ -68,8 +68,8 @@ def student_dashboard():
         stats = stats_map.get(sid,{"total":0, "attended": 0} )
         def unenroll_button():
                 if st.button("Unenroll from tihs course", type='tertiary', width='stretch', icon=':material/delete_forever:'):
-                    # unenroll_student_to_subject(student_id, sid)
-                    st.toast(f'Unenrolled from {sub['name']} successfully!')
+                    unenroll_student_to_subject(student_id, sid)
+                    st.toast(f"Unenrolled from {sub['name']} successfully!")
                     st.rerun()
 
         with cols[i % 2]:
@@ -133,7 +133,7 @@ def student_screen():
                         st.session_state.is_logged_in = True
                         st.session_state.user_role = 'student'
                         st.session_state.student_data = student
-                        st.toast(f'Welcome Back {student['name']}')
+                        st.toast(f"Welcome Back {student['name']}")
                         time.sleep(1)
                         st.rerun()
                 else:
