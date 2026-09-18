@@ -18,13 +18,14 @@ def footer_home():
 
 
 def footer_dashboard():
-    st.markdown("""
+    st.markdown(
+        """
         <div style="
-            margin-top: 2rem;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             gap: 8px;
+            margin-top: 2rem;
             padding: 12px;
             border-top: 1px solid #e5e7eb;
             font-family: Arial, sans-serif;
@@ -46,11 +47,13 @@ def footer_dashboard():
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             ">
-                AttendIQ
+                SnapAttend
             </span>
 
             <span style="font-size: 16px;">
                 ✦
             </span>
         </div>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True
+    )
