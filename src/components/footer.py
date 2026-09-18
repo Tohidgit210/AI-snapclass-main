@@ -1,25 +1,56 @@
 import streamlit as st
 
 
+
+
+
 def footer_home():
-    logo_url = "https://i.ibb.co/4r5X1FY/apnacollege.png"
-    
-    st.markdown(f"""
-        <div style="margin-top:2rem; display:flex; gap:6px; justify-content:center; items-align:center">
-        <p style="font-weight:bold; color:white;"> Created with ❤️ by </p>  
-        <img src='{logo_url}' style='max-height:25px' />
-        </div>
-                
-                """, unsafe_allow_html=True)
+    st.markdown(
+        '<div style="display:flex; justify-content:center; '
+        'align-items:center; gap:8px; margin-top:2rem;">'
+        '<span style="color:white; font-weight:600;">'
+        'Created with ❤️ by</span>'
+        '<span style="color:#67e8f9; font-size:19px; '
+        'font-weight:800;">SnapAttend</span>'
+        '</div>',
+        unsafe_allow_html=True
+    )
 
 
 def footer_dashboard():
-    logo_url = "https://i.ibb.co/4r5X1FY/apnacollege.png"
-    
-    st.markdown(f"""
-        <div style="margin-top:2rem; display:flex; gap:6px; justify-content:center; items-align:center">
-        <p style="font-weight:bold; color:black;"> Created with ❤️ by </p>  
-        <img src='{logo_url}' style='max-height:25px' />
+    st.markdown("""
+        <div style="
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            border-top: 1px solid #e5e7eb;
+            font-family: Arial, sans-serif;
+        ">
+            <span style="
+                font-size: 13px;
+                color: #64748b;
+            ">
+                Powered by
+            </span>
+
+            <span style="
+                font-size: 16px;
+                font-weight: 800;
+                letter-spacing: 0.5px;
+                background: linear-gradient(
+                    90deg, #06b6d4, #6366f1
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            ">
+                AttendIQ
+            </span>
+
+            <span style="font-size: 16px;">
+                ✦
+            </span>
         </div>
-                
-                """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
