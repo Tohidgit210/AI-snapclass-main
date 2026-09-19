@@ -1,32 +1,55 @@
 
+
+
 import streamlit as st
 
-
-
-
-
 def footer_home():
-    st.markdown(
-        '<div style="display:flex; justify-content:center; '
-        'align-items:center; gap:8px; margin-top:2rem;">'
-        '<span style="color:white; font-weight:600;">'
-        'Created with ❤️ by</span>'
-        '<span style="color:#67e8f9; font-size:19px; '
-        'font-weight:800;">SnapAttend</span>'
-        '</div>',
-        unsafe_allow_html=True
-    )
+    logo_url = "https://tse1.mm.bing.net/th/id/OIP.eOED9H2dmVT3FMdInMGpSQHaHa?r=0&pid=Api&h=220&P=0"
+
+    st.markdown(f"""
+        <div style="
+            margin-top: 2rem;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+        ">
+            <p style="
+                font-weight: bold;
+                color: white;
+                margin: 0;
+            ">
+                Created with ❤️ by SnapClass
+            </p>
+
+            <img src="{logo_url}"
+                 style="height: 25px; width: 25px;
+                        object-fit: contain;" />
+        </div>
+    """, unsafe_allow_html=True)
+
 
 def footer_dashboard():
+    logo_url = "https://tse1.mm.bing.net/th/id/OIP.eOED9H2dmVT3FMdInMGpSQHaHa?r=0&pid=Api&h=220&P=0"
+
     st.markdown(f"""
-        <div style="margin-top:2rem; display:flex; gap:6px;
-                    justify-content:center; align-items:center;">
-            <p style="font-weight:bold; color:black;">
-                Created with ❤️ by
+        <div style="
+            margin-top: 2rem;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+        ">
+            <p style="
+                font-weight: bold;
+                color: black;
+                margin: 0;
+            ">
+                Created with ❤️ by SnapClass
             </p>
-            <span style="color:#06b6d4; font-size:19px;
-                         font-weight:800;">
-                SnapAttend
-            </span>
+
+            <img src="{logo_url}"
+                 style="height: 25px; width: 25px;
+                        object-fit: contain;" />
         </div>
     """, unsafe_allow_html=True)
